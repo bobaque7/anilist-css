@@ -2,27 +2,27 @@
 body {
     background: rgb(var(--color-background)) url("https://cdn.discordapp.com/attachments/645334093877215232/788752928071876618/K_8.png") center/100% fixed;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% auto;
 }
 
 /* Transparent banner - use together with background image */
 .banner {
     background-image: none !important;
-    background-color: rgb(36,37,56,0) !important;
+    background-color: rgb(36, 37, 56, 0) !important;
 }
 
 /* Small avatar -> circle frame */
-.text .avatar[data-v-6c3dc0b8]  {
+.text .avatar[data-v-6c3dc0b8] {
     border-radius: 100%;
     transition: transform .2s;
 }
 /* Small avatar hover */
-.text .avatar[data-v-6c3dc0b8]:hover  {
+.text .avatar[data-v-6c3dc0b8]:hover {
     transform: scale(4);
 }
 
 /* Comments section avatar -> circle frame */
-.avatar[data-v-5a191921]  {
+.avatar[data-v-5a191921] {
     border-radius: 100%;
     transition: transform .2s;
 }
@@ -32,25 +32,25 @@ body {
 }
 
 /* favourites section */
-.favourite[data-v-1496db1c] {
+.favourite {
     transition: transform .2s;
     border-radius: 20%;
     position: static;
 }
 /* favourites section hover */
-.favourite[data-v-1496db1c]:hover {
+.favourite:hover {
     transform: scale(1.6);
     position: static;
 }
 /*  favourites section bugfix */
-.favourites-wrap[data-v-1496db1c]{
+.favourites-wrap {
     overflow: visible;
 }
 
 /* About section scrollbar */
 .user .about > div.content-wrap {
-  scrollbar-width: thin;
-  scrollbar-color: rgb(255, 111, 0) rgba(31, 35, 45, 0.95);
+    scrollbar-width: thin;
+    scrollbar-color: rgb(255, 111, 0) rgba(31, 35, 45, 0.95);
 }
 
 /* Anime/manga progress bar color */
@@ -64,7 +64,7 @@ body {
     overflow: visible;
 }
 /* Anime/manga displaying rounded corners, part 2 */
-.cover[data-v-6c3dc0b8]{
+.cover[data-v-6c3dc0b8] {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
@@ -77,12 +77,12 @@ body {
 
 /* Blockquotes centered*/
 .markdown blockquote {
-  margin-right: auto;
+    margin-right: auto;
 }
 
 /* Site background color transparency */
-.site-theme-dark{
- --color-foreground: 16,24,35,.90;
+.site-theme-dark {
+    --color-foreground: 16, 24, 35, .90;
 }
 
 /*Hides hoh download button*/
@@ -110,26 +110,26 @@ html {
 }
 
 /* Modifies load-more button */
-.load-more[data-v-6f203cf2]{
+.load-more[data-v-6f203cf2] {
     border-radius: 30px;
     font-family: 'Brush Script MT', cursive;
     font-size: 3rem;
     color: rgb(255, 111, 0);
-    margin:auto;
+    margin: auto;
     max-width: 200px;
 }
 
 /* Changes top navbar's color. (Normal mode and hover)*/
-.site-theme-dark .nav-unscoped.transparent  {
+.site-theme-dark .nav-unscoped.transparent {
     background: rgb(var(--color-foreground));
 }
 .site-theme-dark .nav-unscoped.transparent:hover {
     background: rgb(16, 24, 35, 0.99);
 }
-.site-theme-dark .nav-unscoped{
+.site-theme-dark .nav-unscoped {
     background: rgb(var(--color-foreground));
 }
-.site-theme-dark .nav-unscoped:hover{
+.site-theme-dark .nav-unscoped:hover {
     background: rgb(16, 24, 35, 0.99);
 }
 
@@ -145,8 +145,7 @@ html {
 }
 
 /* Re-aligns profile picture and name. Part of shorter navbar*/
-.banner .container[data-v-5445dac8]
-{
+.banner .container[data-v-5445dac8] {
     max-width: 65%;
 }
 
@@ -159,7 +158,6 @@ html {
 .activity-feed-wrap[data-v-09492909] {
     margin-left: 3%;
 }
-.stats-wrap[data-v-5c30286e]
-{
+.stats-wrap[data-v-5c30286e] {
     margin-left: 3%;
 }
