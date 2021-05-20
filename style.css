@@ -31,24 +31,28 @@ body {
     transform: scale(6);
 }
 
-/* favourites section */
+/* favourites section */ 
 .favourite {
-    transition: transform .2s;
+    transition: transform 5s linear ;
     border-radius: 20%;
     position: static;
 }
+
 /* favourites section hover */
 .favourite:hover {
-    transform: scale(1.6);
-    position: static;
+ transform: rotateZ(720deg);
+  transform-origin: top;
+    position: relative;
+    transition: .0s ;
 }
-/*  favourites section bugfix */
-.favourites-wrap {
+
+/*  favourites section wrapping */
+.favourites-wrap.anime, .favourites-wrap.manga, .favourites-wrap.characters,.favourites-wrap.staff, .favourites-wrap.studios  {
     overflow: visible;
 }
 
 /* About section scrollbar */
-.user .about > div.content-wrap {
+.user .about > div.content-wrap:hover {
     scrollbar-width: thin;
     scrollbar-color: rgb(255, 111, 0) rgba(31, 35, 45, 0.95);
 }
