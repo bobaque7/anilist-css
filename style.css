@@ -17,6 +17,9 @@ body {
     background-color: rgb(36, 37, 56, 0) !important;
     height: auto !important;
 }
+.banner .shadow{
+    background: none !important;
+}
 
 /* favourites section */
 .favourite {
