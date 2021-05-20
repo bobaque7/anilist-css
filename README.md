@@ -1,7 +1,12 @@
 # anilist-css
 Hoh's userscript (Automail) adds a bunch of cool features to anilist.co
-<br>One of them is the ability to add custom CSS to your profile.
-<br>**Scroll down for installation guide**
+<br/>One of them is the ability to add custom CSS to your profile.
+
+<b>Note to self:</b> Use the stylus plugin to easily test the CSS.
+<br/>https://addons.mozilla.org/en-US/firefox/addon/styl-us/
+<br/>https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en
+
+**Scroll down for installation guide**
 
 Before:![Before](Screenshots/beforeCSS.png) 
 After:![After](Screenshots/afterCSS.png)
@@ -30,7 +35,7 @@ Now for adding some extra css effects.
 1. Go to the "Apps" section in your Settings.
 <br>![Apps](Screenshots/1.png)
 2. Scroll to the bottom. You will see a part called: "Add custom CSS to your profile."
-In the textbox below that title, you can add your css.
+In the textbox below that title, you can add your css.<br/>
 ![AddCSS](Screenshots/2.png)
 3. CSS: ![general-style.css](https://github.com/Kurisu-chan/anilist-css/blob/master/general-style.css) 
    CSS (Raw): ![general-style.css raw](https://raw.githubusercontent.com/Kurisu-chan/anilist-css/master/general-style.css) 
