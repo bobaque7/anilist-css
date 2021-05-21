@@ -1,8 +1,8 @@
 /* Background image (change the URL to change the image) */
 body {
-    background: rgb(var(--color-background)) url("https://w.wallhaven.cc/full/39/wallhaven-398j69.png") center/100% fixed;
+    background: rgb(var(--color-background)) url("https://cdn.discordapp.com/attachments/645334093877215232/845096013252395018/c042a273-92a9-4365-c33e-59ed257745e7.png") center/100% fixed;
     background-repeat: no-repeat !important;
-    background-size: 100% auto !important;
+    background-size: cover !important;
 }
 
 /* Transparent banner - use together with background image */
