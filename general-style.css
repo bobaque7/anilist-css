@@ -1,65 +1,79 @@
 /* Background image (change the URL to change the image) */
 body {
     background: rgb(var(--color-background)) url("https://w.wallhaven.cc/full/39/wallhaven-398j69.png") center/100% fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: no-repeat !important;
+    background-size: 100% auto !important;
 }
 
 /* Transparent banner - use together with background image */
-.banner[data-v-5445dac8] {
+.banner {
     background-image: none !important;
-    background-color: rgb(36,37,56,0);
+    background-color: rgb(36, 37, 56, 0) !important;
+    height: auto !important;
 }
-
-/* Small avatar -> circle frame */
-.text .avatar[data-v-6c3dc0b8]  {
-    border-radius: 100%;
-    transition: transform .2s;
-}
-/* Small avatar hover */
-.text .avatar[data-v-6c3dc0b8]:hover  {
-    transform: scale(4);
-}
-
-/* Comments section avatar -> circle frame */
-.avatar[data-v-5a191921]  {
-    border-radius: 100%;
-    transition: transform .2s;
-}
-/* Comments section avatar hover */
-.avatar[data-v-5a191921]:hover {
-    transform: scale(6);
+.banner .shadow{
+    background: none !important;
 }
 
 /* favourites section */
-.favourite[data-v-1496db1c] {
-    transition: transform .2s;
+.favourite {
+    transition: transform 5s linear;
     border-radius: 20%;
     position: static;
 }
-/* favourites section hover */
-.favourite[data-v-1496db1c]:hover {
-    transform: scale(1.6);
-    position: static;
+
+/* favourites section hover - it spins! */
+.favourite:hover {
+    transform: rotateZ(720deg);
+    transform-origin: top;
+    position: relative;
+    transition: .0s;
+    transform-style: preserve-3d;
 }
-/*  favourites section bugfix */
-.favourites-wrap[data-v-1496db1c]{
+
+/*  favourites section wrapping */
+.favourites-wrap.anime,
+.favourites-wrap.manga,
+.favourites-wrap.characters,
+.favourites-wrap.staff,
+.favourites-wrap.studios {
     overflow: visible;
 }
-/* about section scrollbar */
-.user .about > div.content-wrap {
-  scrollbar-width: thin;
+
+/* About section scrollbar */
+.user .about > div.content-wrap:hover {
+    scrollbar-width: thin;
 }
 
 /* Profile activity (status/messages/list) Makes border corners rounded. Also required as bugfix for .avatar hover! */
-.wrap[data-v-6c3dc0b8] {
-    border-radius: 20px;
-    overflow: visible;
+.wrap,
+.reply {
+    border-radius: 20px !important;
+    overflow: visible !important;
 }
 /* Anime/manga displaying rounded corners, part 2 */
-.cover[data-v-6c3dc0b8]{
+.cover {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+}
+.list-stats {
+    border-radius: 20px !important;
+}
+
+/* Horizontal rule border settings */
+.markdown hr {
+    border: solid 1px rgb(255, 111, 0);
+    border-radius: 1px;
+}
+
+/* Blockquotes*/
+.markdown blockquote {
+    margin-right: auto;
+}
+
+/* Site background color transparency */
+.site-theme-dark {
+    --color-foreground: 16, 24, 35, .90;
 }
 
 /*Hides hoh download button*/
@@ -77,6 +91,7 @@ html {
     width: 6px;
     background: #01232d;
 }
+
 ::-webkit-scrollbar-corner {
     background: #01232d;
 }
@@ -85,21 +100,40 @@ html {
     -webkit-border-radius: 1ex;
 }
 
-/* Changes "Overview/Anime List/Manga List..." nav section. - shorter navbar*/
-.nav-wrap[data-v-5445dac8] {
-    background: rgb(var(--color-foreground));
-    width: 65%;
-    margin: 0 auto;
-    border-radius: 30px;
-}
-.nav[data-v-5445dac8] {
-    padding: 0px;
+/* Modifies load-more button */
+.load-more {
+    border-radius: 30px !important;
+    font-family: 'Brush Script MT', cursive !important;
+    font-size: 3rem !important;
+    margin: auto !important;
+    max-width: 200px !important;
 }
 
-/* Re-aligns profile picture and name. Part of shorter navbar*/
-.banner .container[data-v-5445dac8]
-{
-    max-width: 65%;
+/* Changes "Overview/Anime List/Manga List..." nav section. - shorter navbar*/
+.nav-wrap {
+    background: rgb(var(--color-foreground)) !important;
+    width: 65% !important;
+    margin: 0 auto !important;
+    border-radius: 30px !important;
+}
+
+img.avatar,
+h1.name {
+    margin: auto;
+}
+
+/* Re-aligns profile picture and name. */
+.banner-content {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    width: auto !important;
+    background-color: rgb(var(--color-foreground));
+    padding: 10px;
+    border-radius: 30px !important;
+    margin: auto;
+    flex-direction: row;
+    margin-top: 80px;
+    margin-bottom: 10px
 }
 
 /* Re-aligns more stuff... Part of shorter navbar*/
@@ -108,10 +142,34 @@ html {
     padding-left: 0px;
     padding-right: 0px;
 }
-.activity-feed-wrap[data-v-09492909] {
+.activity-feed-wrap {
     margin-left: 3%;
 }
-.stats-wrap[data-v-5c30286e]
-{
+.stats-wrap {
     margin-left: 3%;
+}
+
+/** Main avatar. */
+.avatar {
+    border-radius: 100%;
+    transition: transform 2s;
+}
+.avatar:hover {
+    /*transform: rotateY(180deg);*/
+    transition: 2s;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+}
+
+/* avatar */
+a[class="avatar"],
+a[class="avatar router-link-exact-active router-link-active"] {
+    transition: transform 1s !important;
+}
+/* avatar hover */
+a[class="avatar"]:hover,
+a[class="avatar router-link-exact-active router-link-active"]:hover {
+    transform: scale(5) !important;
+    transition: transform 1s;
+    transform-style: preserve-3d;
 }
