@@ -1,175 +1,375 @@
-/* Background image (change the URL to change the image) */
-body {
-    background: rgb(var(--color-background)) url("https://cdn.discordapp.com/attachments/645334093877215232/845096013252395018/c042a273-92a9-4365-c33e-59ed257745e7.png") center/100% fixed;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
+/* boba v1.5 */
+/* i copied akaashibaby kill me */
+
+/* background wallpaper */
+body{
+    cursor: url(https://tobiasahlin.com/static/cursors/default.png), auto;
+    background-color: rgb(var(--color-foreground));
+    background: url(https://files.catbox.moe/fsrk49.jpg);
+    background-position: center / 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-/* Transparent banner - use together with background image */
-.banner {
-    background-image: none !important;
-    background-color: rgb(36, 37, 56, 0) !important;
-    height: auto !important;
-}
-.banner .shadow{
-    background: none !important;
+/* transparent banner, use with background */
+.banner[data-v-4f7beb35] { 
+    background-image: none! important;
+    background-color: rgb(36, 37, 56, 0);
 }
 
-/* favourites section */
-.favourite {
-    transition: transform 5s linear;
-    border-radius: 20%;
-    position: static;
-}
-
-/* favourites section hover - it spins! */
-.favourite:hover {
-    transform: rotateZ(720deg);
-    transform-origin: top;
-    position: relative;
-    transition: .0s;
-    transform-style: preserve-3d;
-}
-
-/*  favourites section wrapping */
-.favourites-wrap.anime,
-.favourites-wrap.manga,
-.favourites-wrap.characters,
-.favourites-wrap.staff,
-.favourites-wrap.studios {
-    overflow: visible;
-}
-
-/* About section scrollbar */
-.user .about > div.content-wrap:hover {
-    scrollbar-width: thin;
-}
-
-/* Profile activity (status/messages/list) Makes border corners rounded. Also required as bugfix for .avatar hover! */
-.wrap,
-.reply {
-    border-radius: 20px !important;
-    overflow: visible !important;
-}
-/* Anime/manga displaying rounded corners, part 2 */
-.cover {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-.list-stats {
-    border-radius: 20px !important;
-}
-
-/* Horizontal rule border settings */
-.markdown hr {
-    border: solid 1px rgb(255, 111, 0);
-    border-radius: 1px;
-}
-
-/* Blockquotes*/
-.markdown blockquote {
-    margin-right: auto;
-}
-
-/* Site background color transparency */
-.site-theme-dark {
-    --color-foreground: 16, 24, 35, .90;
-}
-
-/*Hides hoh download button*/
+/* hides the HOH download button on banner */
 .hohDownload {
     display: none;
 }
 
-/* Changes scrollbar for whole page (Firefox)*/
-html {
-    scrollbar-width: thin;
-}
-
-/* Chrome scrollbar */
+/* modify scroll bar  */
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 5px;
     background: #01232d;
+    border-radius: 50px;
 }
-
 ::-webkit-scrollbar-corner {
     background: #01232d;
 }
 ::-webkit-scrollbar-thumb {
-    background: #ff6f00;
+    background: #574b74;
     -webkit-border-radius: 1ex;
 }
 
-/* Modifies load-more button */
-.load-more {
-    border-radius: 30px !important;
-    font-family: 'Brush Script MT', cursive !important;
-    font-size: 3rem !important;
-    margin: auto !important;
-    max-width: 200px !important;
+/* change the AL logo on top nav bar */
+.logo img[data-v-4fbac4e1] {
+    content: url(https://i.postimg.cc/HxtY1R32/hands.gif);
 }
 
-/* Changes "Overview/Anime List/Manga List..." nav section. - shorter navbar*/
-.nav-wrap {
-    background: rgb(var(--color-foreground)) !important;
-    width: 65% !important;
-    margin: 0 auto !important;
-    border-radius: 30px !important;
-}
-
-img.avatar,
-h1.name {
-    margin: auto;
-}
-
-/* Re-aligns profile picture and name. */
-.banner-content {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-    transition: 0.3s;
-    width: auto !important;
-    background-color: rgb(var(--color-foreground));
-    padding: 10px;
-    border-radius: 30px !important;
-    margin: auto;
-    flex-direction: row;
-    margin-top: 80px;
-    margin-bottom: 10px
-}
-
-/* Re-aligns more stuff... Part of shorter navbar*/
+/* content container */
 .content.container {
-    max-width: 65%;
-    padding-left: 0px;
-    padding-right: 0px;
-}
-.activity-feed-wrap {
-    margin-left: 3%;
-}
-.stats-wrap {
-    margin-left: 3%;
+    background-color: rgba(0, 0, 0, 0);
+    max-width: 80%;
+    padding: 30px 30px;
+    border-radius: 0 0 15px 15px;
 }
 
-/** Main avatar. */
-.avatar {
+/* modify activity status - overview - “write a status” - activity status replies - “write a reply”> corners rounded */
+.wrap[data-v-1bf2cf4e] {
+    border-radius: 15px 15px 15px 15px;
+    overflow: auto;
+}
+.overview[data-v-5c30286e] .content-wrap {
+    border-radius: 15px;
+}
+.input[data-v-c574a71c] {
+border-radius: 12px;
+}
+.reply[data-v-732ef224] {
+    border-radius: 15px;
+}
+
+
+
+
+/* modify overview stats */
+
+.section > .stats-wrap > .list-stats > .stats-wrap {
+
+
+
+
+   display: grid;
+
+
+   grid-auto-flow: row;
+
+
+   grid-row-gap: 10px;
+
+
+   grid-template-columns: auto auto;
+
+
+   padding: 20px 40px;
+
+
+   text-align: left;
+
+
+}
+
+
+
+
+
+
+
+.section > .stats-wrap > .list-stats > .stats-wrap .stat:nth-child(1) {
+
+
+   grid-row-start: span 2;
+
+
+}
+
+
+
+
+
+
+
+.section > .stats-wrap > .list-stats > .stats-wrap .stat:nth-child(1) .value {
+
+
+   font-size: 5.5rem;
+
+
+}
+
+
+
+
+
+
+
+.section > .stats-wrap > .list-stats > .stats-wrap .stat .value {
+
+
+   font-size: 2rem;
+
+
+   padding-bottom: 0px;
+
+
+}
+
+
+
+
+
+
+
+.section > .stats-wrap > .list-stats > .stats-wrap .stat .label {
+
+
+   font-size: 1.2rem;
+
+
+}
+
+
+
+
+
+
+
+.section
+
+
+ > .stats-wrap
+
+
+ > .list-stats:nth-child(1)
+
+
+ .stat:nth-child(1)
+
+
+ .label:before {
+
+
+   content: '';
+
+
+   mask: url(https://criolaservice.by/AL-css/svg/tv.svg) no-repeat 50% 50%;
+
+
+   -webkit-mask: url(https://criolaservice.by/AL-css/svg/tv.svg) no-repeat 50% 50%;
+
+
+   mask-size: cover;
+
+
+   -webkit-mask-size: cover;
+
+
+   width: 19px;
+
+
+   height: 16px;
+
+
+   margin-right: 5px;
+
+
+   background-color: rgba(var(--color-text-light));
+
+
+}
+
+
+
+
+
+
+
+.section > .stats-wrap > .list-stats:nth-child(2) .stat:nth-child(1) .label,
+
+
+.section > .stats-wrap > .list-stats:nth-child(1) .stat:nth-child(1) .label {
+
+
+   display: flex;
+
+
+   align-items: center;
+
+
+   color: rgb(var(--color-text-light));
+
+
+}
+
+
+
+
+
+
+
+.section
+
+
+ > .stats-wrap
+
+
+ > .list-stats:nth-child(2)
+
+
+ .stat:nth-child(1)
+
+
+ .label:before {
+
+
+   content: '';
+
+
+   mask: url(https://criolaservice.by/AL-css/svg/book.svg) no-repeat 50% 50%;
+
+
+   -webkit-mask: url(https://criolaservice.by/AL-css/svg/book.svg) no-repeat 50% 50%;
+
+
+   mask-size: cover;
+
+
+   -webkit-mask-size: cover;
+
+
+   width: 13px;
+
+
+   height: 16px;
+
+
+   margin-right: 5px;
+
+
+   background-color: rgba(var(--color-text-light));
+
+
+}
+
+
+
+
+/* hide the milestones/progress bar on the overview anime and manga stats */
+.milestones[data-v-815ccddc] {
+    display: none;
+}
+.progress[data-v-815ccddc] {
+    display: none;
+}
+
+/* activity status small avatar -> circle frame */
+.text .avatar[data-v-1bf2cf4e] {
     border-radius: 100%;
-    transition: transform 2s;
-}
-.avatar:hover {
-    /*transform: rotateY(180deg);*/
-    transition: 2s;
-    transform-style: preserve-3d;
-    transform: rotateY(180deg);
+    transition: transform .6s;
 }
 
-/* avatar */
-a[class="avatar"],
-a[class="avatar router-link-exact-active router-link-active"] {
-    transition: transform 1s !important;
+/* activity status small avatar hover */
+.text .avatar[data-v-1bf2cf4e]:hover {
+    transform: scale(1.3);
 }
-/* avatar hover */
-a[class="avatar"]:hover,
-a[class="avatar router-link-exact-active router-link-active"]:hover {
-    transform: scale(5) !important;
-    transition: transform 1s;
-    transform-style: preserve-3d;
+
+/* activity status comment reply section small avatar -> circle frame */
+.avatar[data-v-732ef224] {
+    border-radius: 100%
+    transition: transform .6s;
+}
+
+/* activity status comment reply section small avatar hover */
+.avatar[data-v-732ef224]:hover {
+    transform: scale(1.3);
+}
+
+/* favorite media section */
+.favourite[data-v-3f86aedd] {
+    transition: transform .6s;
+    border-radius: 18%;
+    position: static;
+}
+
+/* favourites media section > wrap */
+.favourites-wrap[data-v-3f86aedd] {
+    overflow: visible;
+}
+
+/* favorites media section > hover */
+.favourite[data-v-3f86aedd]:hover {
+    transform: scale(1.2);
+    position: static;
+}
+
+/* pfp icons in social on nav bar => AL default social > hohsocial*/
+.avatar[data-v-39573fe2] {
+    border-radius: 100px;
+    height: 80px;
+    width: 80px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.user-follow .follow-card {
+    background-color: rgba(0, 0, 0, 0);
+}
+.hohSocialContent .avatar {
+    border-radius: 100px;
+    height: 80px;
+    width: 80px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+/* change profile nav bar */
+.nav-wrap[data-v-4f7beb35] {
+    background: rgb(var(--color-foreground));
+    width: 75%;
+    margin: auto;
+    border-radius: 20px;
+}
+.nav[data-v-4f7beb35] {
+    font-size: 1.7rem;
+    max-width: 1220px;
+    text-align: center;
+    padding: 0px;
+}
+
+/* modify genre overview */
+.percentage[data-v-aedb6876] {
+    display: none;
+}
+
+/* modifies load more button at the bottom of page */
+.load-more[data-v-6f203cf2] {
+    border-radius: 15px;
+    padding: 7px;
 }
